@@ -1,11 +1,17 @@
 CREATE TABLE student(
-    id VARCHAR(10) PRIMARY KEY ,
+    id VARCHAR(10) PRIMARY KEY,
     name VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE program(
     id VARCHAR(10) PRIMARY KEY,
     name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE module(
+    id VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    credit INT NOT NULL
 );
 
 CREATE TABLE student_exam(
@@ -77,14 +83,6 @@ INSERT INTO enrollment(student_id,batch_number,registered_date) VALUES
                                                     ('S008','B009',2024-08-7),
                                                     ('S009','B0011',2024-08-7),
                                                     ('S010','B004',2024-08-7);
-
-CREATE TABLE module
-(
-    id     VARCHAR(10) PRIMARY KEY,
-    name   VARCHAR(100) NOT NULL,
-    credit INT          NOT NULL
-);
-
 
 INSERT INTO module(id, name, credit) VALUES
                                          ('M001','Swe',2312),
