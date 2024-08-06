@@ -88,3 +88,43 @@ INSERT INTO module(id, name, credit) VALUES
                                          ('M013', 'SE13', 32423),
                                          ('M014', 'SE14', 32443);
 
+
+
+INSERT INTO module (id, name, credit) VALUES
+                                          ('M001', 'Java', 3),
+                                          ('M002', 'English', 4),
+                                          ('M003', 'Mathematics', 3),
+                                          ('M004', 'Physics', 5),
+                                          ('M005', 'Chemistry', 2),
+                                          ('M006', 'Biology', 3),
+                                          ('M007', 'History', 4),
+                                          ('M008', 'Geography', 3),
+                                          ('M009', 'Economics', 2),
+                                          ('M010', 'Statistics', 4),
+                                          ('M011', 'Computer Science', 3),
+                                          ('M012', 'Software Engineering', 5),
+                                          ('M013', 'Data Structures', 3),
+                                          ('M014', 'Algorithms', 2),
+                                          ('M015', 'Operating Systems', 4),
+                                          ('M016', 'Databases', 3),
+                                          ('M017', 'Networking', 4),
+                                          ('M018', 'Web Development', 3),
+                                          ('M019', 'Artificial Intelligence', 2),
+                                          ('M020', 'Machine Learning', 3),
+                                          ('M021', 'Cyber Security', 5),
+                                          ('M022', 'Digital Marketing', 3),
+                                          ('M023', 'Business Administration', 4),
+                                          ('M024', 'Project Management', 3),
+                                          ('M025', 'Accounting', 2),
+                                          ('M026', 'Finance', 4),
+                                          ('M027', 'Human Resources', 3),
+                                          ('M028', 'Marketing', 2),
+                                          ('M029', 'Sales', 3),
+                                          ('M030', 'Customer Service', 4);
+
+
+
+
+
+
+
