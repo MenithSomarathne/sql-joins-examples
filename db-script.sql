@@ -63,3 +63,19 @@ CREATE TABLE module
     credit INT          NOT NULL
 );
 
+
+INSERT INTO module(id, name, credit) VALUES
+                                         ('M001','Swe',2312),
+                                         ('M002','Swe',2312),
+                                         ('M003','Swe',78765),
+                                         ('M004','Swe',322),
+                                         ('M005','Swe',2312),
+                                         ('M006','Swe',33),
+                                         ('M007','Swe',2312),
+                                         ('M008','Swe',333),
+                                         ('M009','Swe',2322),
+                                         ('M0010','Swe',34234),
+                                         ('M0011','Swe',342),
+                                         ('M0012','Swe',2312),
+                                         ('M0013','Swe',32423),
+                                         ('M0014','Swe',32443);
