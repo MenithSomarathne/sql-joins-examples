@@ -23,6 +23,18 @@ INSERT INTO program(id, name) VALUES
                                   ('P003','GDSE'),
                                   ('P004','SNDSE');
 
+INSERT INTO exam(exam_code,passing_score,module_id) VALUES
+                                                        ('EX001',50,'M001'),
+                                                        ('EX001',50,'M002'),
+                                                        ('EX001',50,'M003'),
+                                                        ('EX001',50,'M004'),
+                                                        ('EX001',50,'M005'),
+                                                        ('EX002',50,'M001'),
+                                                        ('EX002',50,'M002'),
+                                                        ('EX002',50,'M002'),
+                                                        ('EX002',50,'M004'),
+                                                        ('EX002',50,'M005');
+
 INSERT INTO enrollment(student_id,batch_number,registered_date) VALUES
                                                     ('S001','B001',2024-08-7),
                                                     ('S002','B002',2024-08-7),
@@ -44,7 +56,6 @@ INSERT INTO enrollment(student_id,batch_number,registered_date) VALUES
                                                     ('S009','B0011',2024-08-7),
                                                     ('S010','B004',2024-08-7);
 
-
 CREATE TABLE module
 (
     id     VARCHAR(10) PRIMARY KEY,
@@ -52,4 +63,3 @@ CREATE TABLE module
     credit INT          NOT NULL
 );
 
-# //hello
