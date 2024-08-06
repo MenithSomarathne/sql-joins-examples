@@ -31,7 +31,7 @@ CREATE TABLE enrollment (
                             student_id VARCHAR(10),
                             batch_number VARCHAR(10),
                             registered_date DATE,
-                            PRIMARY KEY (student_id, batch_number),
+                            CONSTRAINT pk_enrollment PRIMARY KEY (student_id, batch_number),
                             CONSTRAINT fk_student_enrollment FOREIGN KEY (student_id) REFERENCES student(id),
                             CONSTRAINT fk_batch FOREIGN KEY (batch_number) REFERENCES batch(number)
 );
