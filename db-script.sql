@@ -103,7 +103,7 @@ INSERT INTO enrollment(student_id,batch_number,registered_date) VALUES
                                                     ('S009','B0011',2024-08-7),
                                                     ('S010','B004',2024-08-7);
 
-<<<<<<< HEAD
+
 
 
 
@@ -115,8 +115,7 @@ CREATE TABLE module
 );
 
 
-=======
->>>>>>> refs/remotes/origin/main
+
 INSERT INTO module(id, name, credit) VALUES
 
                                          ('M001','Swe',2312),
@@ -149,4 +148,11 @@ INSERT INTO module(id, name, credit) VALUES
                                          ('M013', 'SE13', 32423),
                                          ('M014', 'SE14', 32443);
 
+INSERT INTO batch (number, program_id) VALUES
+                                           ('B001', 'P001'),
+                                           ('B002', 'P002'),
+                                           ('B003', 'P003'),
+                                           ('B004', 'P004'),
+                                           ('B005', 'P005'),
+                                           ('B006', 'P006');
 
