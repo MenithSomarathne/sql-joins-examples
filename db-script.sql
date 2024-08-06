@@ -1,4 +1,5 @@
 
+
 CREATE TABLE batch (
     number VARCHAR(10) PRIMARY KEY ,
     program_id VARCHAR(10) NOT NULL ,
@@ -7,6 +8,15 @@ CREATE TABLE batch (
 );
 
 
+
+CREATE TABLE exam(
+                     exam_code VARCHAR(10) PRIMARY KEY ,
+                     passing_score INT NOT NULL ,
+                     module_id VARCHAR(10) NOT NULL ,
+                     CONSTRAINT fk_module FOREIGN KEY  (module_id) REFERENCES module(id)
+);
+
+>>>>>>> refs/remotes/origin/main
 CREATE TABLE student(
     id VARCHAR(10) PRIMARY KEY ,
     name VARCHAR(100) NOT NULL
@@ -77,6 +87,7 @@ CREATE TABLE module
 
 
 INSERT INTO module(id, name, credit) VALUES
+
                                          ('M001','Swe',2312),
                                          ('M002','Swe',2312),
                                          ('M003','Swe',78765),
@@ -91,4 +102,20 @@ INSERT INTO module(id, name, credit) VALUES
                                          ('M0012','Swe',2312),
                                          ('M0013','Swe',32423),
                                          ('M0014','Swe',32443);
+
+                                         ('M001', 'SE1', 2312),
+                                         ('M002', 'SE2', 2312),
+                                         ('M003', 'SE3', 78765),
+                                         ('M004', 'SE4', 322),
+                                         ('M005', 'SE5', 2312),
+                                         ('M006', 'SE6', 33),
+                                         ('M007', 'SE7', 2312),
+                                         ('M008', 'SE8', 333),
+                                         ('M009', 'SE9', 2322),
+                                         ('M010', 'SE10', 34234),
+                                         ('M011', 'SE11', 342),
+                                         ('M012', 'SE12', 2312),
+                                         ('M013', 'SE13', 32423),
+                                         ('M014', 'SE14', 32443);
+
 
