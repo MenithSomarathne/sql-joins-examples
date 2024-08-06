@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mysql_project_container:
+    image: mysql:latest
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: dep12_join_example
+      MYSQL_PASSWORD: mysqlpassword
+    volumes:
+      - ~/project/joinexample:/var/lib/mysql
