@@ -1,10 +1,11 @@
+version: '3.8'
 services:
-  container1:
-    image: mysql
-    container_name: sql_joins_container
+  mysql_project_container:
+    image: mysql:latest
+    network_mode: host
     environment:
-      - MYSQL_ROOT_PASSWORD=mysql
-    ports:
-      - 15000:3306
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: dep12_join_example
+      MYSQL_PASSWORD: mysql
     volumes:
-      - ~/project:/var/lib/mysql
+      - ~/project/joinexample:/var/lib/mysql
