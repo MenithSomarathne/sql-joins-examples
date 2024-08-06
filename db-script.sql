@@ -79,3 +79,11 @@ INSERT INTO module(id, name, credit) VALUES
                                          ('M012', 'SE12', 2312),
                                          ('M013', 'SE13', 32423),
                                          ('M014', 'SE14', 32443);
+CREATE TABLE program_module(
+    program_id VARCHAR (10),
+    module_id VARCHAR (10),
+    CONSTRAINT pk_program_module PRIMARY KEY (program_id,program_id),
+    CONSTRAINT fk_program FOREIGN KEY (program_id) REFERENCES program(id),
+    CONSTRAINT fk_module FOREIGN KEY (module_id) REFERENCES module(id)
+
+)
