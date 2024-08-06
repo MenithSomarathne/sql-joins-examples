@@ -5,7 +5,9 @@ Welcome to the SQL Joins Examples repository! This project provides a collection
 ## Setup and Running the MySQL Container
 
 To get started with the SQL Joins Examples project, you'll need to set up a MySQL database using Docker. Follow the steps below to run the MySQL container:
-
+**pull** the docker mysql image from the docker hub and run it. Before run need to start the docker container
+to run docker , you need to run this command where the db-script file is present.
+use this command, docker-compose up
 ### Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) installed on your machine
@@ -16,15 +18,17 @@ To get started with the SQL Joins Examples project, you'll need to set up a MySQ
 We provide a docker-compose.yml file to simplify the setup of the MySQL container. Below is the configuration you can use:
 
 ```yaml
-version: '3.1'
 
+
+version: '3.8'
 services:
-  mysql:
-    image: mysql:latest
-    container_name: sql_joins_container
+  mysql_project_container:
+    image: mysql
+    network_mode: host
     environment:
-      - MYSQL_ROOT_PASSWORD=mysql
-    ports:
-      - 15000:3306
+      MYSQL_ROOT_PASSWORD: mysql
+      TCP_PORT : 15000
+      MYSQL_DATABASE: dep12_join_example
+      MYSQL_PASSWORD: mysqlpassword
     volumes:
-      - ~/project:/var/lib/mysql
+      - ~/project/joinexample:/var/lib/mysql

@@ -1,3 +1,16 @@
+DROP DATABASE IF EXISTS dep12_join_example;
+
+CREATE DATABASE dep12_join_example;
+USE dep12_join_example;
+DROP TABLE IF EXISTS enrollment_exam;
+DROP TABLE IF EXISTS enrollment;
+DROP TABLE IF EXISTS exam;
+DROP TABLE IF EXISTS program_module;
+DROP TABLE IF EXISTS module;
+DROP TABLE IF EXISTS batch;
+DROP TABLE IF EXISTS program;
+DROP TABLE IF EXISTS student;
+
 CREATE TABLE student (
                          id VARCHAR(10) PRIMARY KEY,
                          name VARCHAR(100) NOT NULL
@@ -9,8 +22,9 @@ CREATE TABLE program (
 );
 
 CREATE TABLE batch (
-                       number VARCHAR(10) PRIMARY KEY,
-                       program_id VARCHAR(10) NOT NULL,
+                       id VARCHAR(10) PRIMARY KEY ,
+                       number VARCHAR(10) ,
+                       program_id VARCHAR(10) NOT NULL ,
                        CONSTRAINT fk_program FOREIGN KEY (program_id) REFERENCES program(id)
 );
 
