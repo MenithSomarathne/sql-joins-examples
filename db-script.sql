@@ -242,3 +242,25 @@ INSERT INTO program_module(program_id, module_id) VALUES
                                                       ('P004', 'M012'),
                                                       ('P001', 'M013'),
                                                       ('P002', 'M014');
+
+CREATE TABLE enrollment_exam (
+                                 student_id VARCHAR(10),
+                                 batch_number VARCHAR(10),
+                                 exam_code VARCHAR(10),
+                                 CONSTRAINT pk_enrollment_exam PRIMARY KEY (student_id, batch_number, exam_code),
+                                 FOREIGN KEY (student_id, batch_number) REFERENCES enrollment (student_id, batch_number)
+);
+
+
+INSERT INTO enrollment_exam (student_id, batch_number, exam_code) VALUES
+                                                                      ('S001', 'B001', 'EX001'),
+                                                                      ('S002', 'B002', 'EX002'),
+                                                                      ('S003', 'B003', 'EX003'),
+                                                                      ('S004', 'B004', 'EX004'),
+                                                                      ('S005', 'B005', 'EX005'),
+                                                                      ('S006', 'B006', 'EX001'),
+                                                                      ('S007', 'B007', 'EX002'),
+                                                                      ('S008', 'B008', 'EX003'),
+                                                                      ('S009', 'B009', 'EX004'),
+                                                                      ('S010', 'B010', 'EX005'),
+                                                                      ('S011', 'B011', 'EX001');
